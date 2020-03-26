@@ -1,14 +1,1 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>typescrpt_jquery</title>
-  <link rel="stylesheet" href="/style.0edc265c.css">
-</head>
-
-<body>
-</body>
-<script src="/jquery.ff6e3446.js"></script>
-
-</html>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>typescrpt_jquery</title><link rel="stylesheet" href="/style.1829454b.css"><style>.layer{margin-top:16px}.red{background-color:#ff5722}</style></head><body> <div class="container"> <div class="layer"> <h3>元素选择器</h3> <p>基于document.querySelectAll制作</p> <div id="A">获取ID为A的元素</div> <button onclick="console.log($('#A')); ">打开控制台查看</button> </div> <div class="layer"> <h3>获取元素属性</h3> <div name="hello" id="B">{name:hello}</div> <button onclick="console.log($('#B').attr('name'))">打开控制台查看</button> <div>设置属性</div> <button onclick="console.log($('#B').attr('age','18'),$('#B').attr('age'))">点击设置</button> </div> <div class="layer"> <h3>设置移除class</h3> <div id="C">我是背景</div> <button onclick="$('#C').addClass('red')">增加背景</button> <button onclick="$('#C').removeClass('red')">移除背景</button> </div> <div class="layer"> <h3>修改style</h3> <div id="D">我是背景</div> <button onclick="$('#D').css('color','red')">增加样式</button> <button onclick="$('#D').css({color:'blue'})">增加样式对象方式</button> </div> <div class="layer"> <h3>显示or隐藏</h3> <div id="E">我是元素</div> <button onclick="$('#E').show()">点击显示</button> <button onclick="$('#E').hide()">点击隐藏</button> </div> <div class="layer"> <h3>html和text</h3> <div id="F">我是文本</div> <button onclick="$('#F').html('<b>你好我是html</b>')">点击增加html</button> <button onclick="$('#F').text('你好我是text')">点击增加text</button> </div> <div class="layer"> <h3>绑定事件</h3> <div id="G">我有单击事件</div> <button onclick="$('#G').on('click',function(){alert('你好')})">点击增加事件</button> <button onclick="$('#G').unbind('click')">解绑事件</button> </div> </div> </body><script src="/jquery.8f47630d.js"></script></html>
