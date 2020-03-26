@@ -20,7 +20,7 @@ interface event {
    * fn 方法
    */
   type: string;
-  fn: handleEvent;
+  fn: handleEvent[];
 }
 const Events: WeakMap<HTMLElement, event> = new Map();
 //备注：this[index]未做提示，增加接口描述即可
@@ -154,10 +154,15 @@ class DomElement implements Jquery {
    */
   on(handle: string, fn: handleEvent) {
     this.each(item => {
-      Events.set(item, {
-        type: handle,
-        fn: fn
-      });
+      if (Events.has(item)) {
+        const obj = Events.get(item);
+        obj.fn.push(fn);
+      } else {
+        Events.set(item, {
+          type: handle,
+          fn: [fn]
+        });
+      }
       item.addEventListener(handle, fn, false);
     });
   }
@@ -166,7 +171,10 @@ class DomElement implements Jquery {
       if (Events.has(item)) {
         const obj = Events.get(item);
         if (obj.type === handle) {
-          item.removeEventListener(obj.type, obj.fn, false);
+          obj.fn.map(f => {
+            item.removeEventListener(obj.type, f, false);
+          });
+          Events.delete(item);
         }
       }
     });
