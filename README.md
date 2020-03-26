@@ -5,3 +5,4 @@
     parcel server pages/*.html
 
 ## 1.简易jquery
+![图片1](./pic/1,jpg)
