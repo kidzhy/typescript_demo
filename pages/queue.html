@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>queue</title>
+  <link rel="stylesheet" href="../src/style.css">
+</head>
+
+<body>
+  <h1>队列</h1>
+  <div class="container">
+    <div class="layer">
+      <h3>创建一个队列</h3>
+      <div>
+        const queue = new Queue();
+      </div>
+      <button id="abtn">点击创建</button>
+    </div>
+    <div class="layer">
+      <h3>查看列队</h3>
+      <div>
+        const queue = new Queue();
+      </div>
+      <div id="e"></div>
+      <button id="ebtn">点击创建</button>
+    </div>
+    <div class="layer">
+      <h3>添加元素</h3>
+      <div>
+        queue.enqueue("hello");
+        <br />
+        queue.enqueue("world");
+      </div>
+      <div id="b"></div>
+      <button id="bbtn">添加元素</button>
+    </div>
+    <div class="layer">
+      <h3>获取长度</h3>
+      <div>
+        queue.size();
+      </div>
+      <div id="c"></div>
+      <button id="cbtn">添加元素</button>
+    </div>
+    <div class="layer">
+      <h3>其他api</h3>
+      <div>
+        queue.isEmpty();
+        <br>
+        queue.dequeue();//移除元素
+        <br>
+      </div>
+      <button id="dbtn1">是否为空</button>
+      <button id="dbtn2">移除元素</button>
+    </div>
+  </div>
+</body>
+<script src="../src/queue/index.ts"></script>
+
+</html>
